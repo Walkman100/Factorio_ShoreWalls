@@ -2,8 +2,17 @@
 local shorewall_tech = {
     type = "technology",
     name = "shorewall-tech",
-    icon = "__base__/graphics/technology/stone-wall.png",
-    icon_size = 256,
+    icons = {
+        {
+            icon = "__base__/graphics/terrain/water/hr-water-o.png",
+            icon_size = 64
+        },
+        {
+            icon = "__base__/graphics/technology/stone-wall.png",
+            icon_size = 256,
+            scale = 0.25
+        },
+    },
     effects = {
         {
             type = "unlock-recipe",
@@ -48,21 +57,23 @@ local shorewall_recipe = {
     result_count = 1
 }
 
+local shorewall_item_icons = {
+    {
+        icon = "__base__/graphics/terrain/water/hr-water-o.png",
+        icon_size = 64
+    },
+    {
+        icon = "__base__/graphics/icons/wall.png",
+        icon_size = 64,
+        scale = 0.45
+    }
+}
+
 -- item
 local shorewall_item = {
     type = "item",
     name = "shorewall-item",
-    icons = {
-        {
-            icon = "__base__/graphics/terrain/water/hr-water-o.png",
-            icon_size = 64
-        },
-        {
-            icon = "__base__/graphics/icons/wall.png",
-            icon_size = 64,
-            scale = 0.45
-        }
-    },
+    icons = shorewall_item_icons,
     flags = {},
     subgroup = "defensive-structure",
     order = "a[wall]-a[shorewall]",
@@ -74,6 +85,7 @@ local shorewall_item = {
 local shorewall_entity = table.deepcopy(data.raw["wall"]["stone-wall"])
 local updates = {
     name = "shorewall-entity",
+    icons = shorewall_item_icons,
     collision_mask = {
         -- "item-layer",    items can't be on water
         "object-layer",
