@@ -6,7 +6,8 @@
     "factorio_version": "1.1",
     "dependencies": [
         "base >= 1.1",
-        "CanalBuilderWLK"
+        "CanalBuilderWLK",
+        "? SchallTankPlatoon"
     ],
     "description": "Walls placeable on shallow water. Now you don't have to place landfill just to build walls!"
 }
