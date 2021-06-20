@@ -52,8 +52,17 @@ local shorewall_recipe = {
 local shorewall_item = {
     type = "item",
     name = "shorewall-item",
-    icon = "__base__/graphics/icons/wall.png",
-    icon_size = 64,
+    icons = {
+        {
+            icon = "__base__/graphics/terrain/water/hr-water-o.png",
+            icon_size = 64
+        },
+        {
+            icon = "__base__/graphics/icons/wall.png",
+            icon_size = 64,
+            scale = 0.45
+        }
+    },
     flags = {},
     subgroup = "defensive-structure",
     order = "a[wall]-a[shorewall]",
@@ -66,6 +75,9 @@ local shorewall_entity = table.deepcopy(data.raw["wall"]["stone-wall"])
 local updates = {
     name = "shorewall-entity",
     collision_mask = {
+        -- "item-layer",    items can't be on water
+        "object-layer",
+        "player-layer",
         "ground-tile"
     }
 }
