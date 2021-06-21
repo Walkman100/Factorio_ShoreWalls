@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Bugfixes:
+    - Concrete Shore wall recipe was not enabled in saves with Concrete walls already researched
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
   Features:
     - Added Schall Tank Platoon compatibility
