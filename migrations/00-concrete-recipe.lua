@@ -1,4 +1,3 @@
--- if mods["SchallTankPlatoon"] then
 if game.active_mods["SchallTankPlatoon"] then
     for index, force in pairs(game.forces) do
         local technologies = force.technologies
