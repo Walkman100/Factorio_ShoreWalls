@@ -94,10 +94,11 @@ local updates = {
     }
 }
 
-for k,v in pairs(updates) do
+for k, v in pairs(updates) do
     shorewall_entity[k] = updates[k]
 end
 shorewall_entity.minable.result = "shorewall-item"
+shorewall_entity.next_upgrade = nil;
 
 data:extend({
     shorewall_tech,

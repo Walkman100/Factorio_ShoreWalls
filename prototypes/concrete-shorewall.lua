@@ -70,6 +70,7 @@ if mods["SchallTankPlatoon"] then
         shorewall_concrete_entity[k] = updates[k]
     end
     shorewall_concrete_entity.minable.result = "shorewall-concrete-item"
+    shorewall_concrete_entity.next_upgrade = nil;
 
     data:extend({
         shorewall_concrete_tech,
