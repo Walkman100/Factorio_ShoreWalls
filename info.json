@@ -6,8 +6,9 @@
     "factorio_version": "1.1",
     "dependencies": [
         "base >= 1.1",
-        "CanalBuilderWLK",
+        "? CanalBuilderWLK",
+        "? CanalBuilderMAV",
         "? SchallTankPlatoon"
     ],
-    "description": "Walls placeable on shallow water. Now you don't have to place landfill just to build walls!"
+    "description": "Walls placeable on shallow water. Now you don't have to place landfill just to build walls! ⚠️ NOTE ⚠️ This mod REQUIRES either CanalBuilderWLK or CanalBuilderMAV as they provide the waterfill-tech prototype."
 }
